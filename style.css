@@ -1,0 +1,136 @@
+:root {
+  --primary-color: #6f2dbd;
+  --light-primary: #a663cc;
+  --lightest-color: #b298dc;
+  --secondary-color: #b8d0eb;
+  --light-secondary: #b9faf8;
+  --white-ice: rgb(233, 231, 231);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.3rem;
+  background-color: var(--lightest-color);
+  color: var(--primary-color);
+}
+
+header > h2 > i {
+  margin-right: 0.5rem;
+}
+
+#searchContainer {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  justify-content: flex-end;
+}
+
+.movieNameWrapper {
+  width: 65%;
+  display: flex;
+  align-items: center;
+}
+
+.movieNameWrapper > input {
+  width: 100%;
+}
+
+.movieYearWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.movieYearWrapper > input {
+  max-width: 5rem;
+}
+
+.movieYearWrapper > input,
+.movieNameWrapper > input {
+  margin: 0 0.3rem;
+  border: 1.2px solid var(--primary-color);
+  border-radius: 5px;
+  padding: 0.3rem 0.2rem;
+  background-color: var(--white-ice);
+}
+
+.movieYearWrapper > label,
+.movieNameWrapper > label {
+  font-weight: bold;
+}
+
+#searchButton {
+  padding: 0.3rem;
+  border-inline: 1.5px solid var(--primary-color);
+  border-radius: 6px;
+}
+
+#searchButton:focus,
+#searchButton:hover {
+  color: var(--light-primary);
+}
+
+main {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: var(--white-ice);
+  color: var(--primary-color);
+  flex-grow: 1;
+}
+
+#movieList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+#movieList article {
+  display: flex;
+  flex-direction: column;
+}
+
+#movieList article > img {
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+
+#removeButton {
+  border: 3px solid var(--primary-color);
+  padding: 0.3rem 0;
+  width: 99%;
+  border-radius: 10px;
+  font-weight: bold;
+  box-shadow: 1.5px 1.5px 8px #000;
+  color: var(--light-primary);
+}
+
+#removeButton:hover,
+#removeButton:focus {
+  background-color: var(--primary-color);
+  color: var(--light-secondary);
+}
+
+#moviePosterList {
+  height: 80%;
+}
